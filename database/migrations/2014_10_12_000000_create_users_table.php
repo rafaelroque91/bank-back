@@ -19,7 +19,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->boolean('admin')->default(0);
-            $table->decimal('balance', 10, 2)->default(0);
             $table->timestamps();
         });
     }
