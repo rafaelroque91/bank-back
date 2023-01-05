@@ -19,6 +19,10 @@ class TransactionController extends BaseController
     }
 
     public function depositCheck(DepositCheckRequest $request){
+        if (Gate::allows('admin-check')) {
+            return $this->responseError('now allowed for admin');
+        }
+
         $request->validated();
         $checkFile = $request->file('check');
         $checkInputs = $request->only(['description','amount']);
@@ -33,7 +37,9 @@ class TransactionController extends BaseController
     }
 
     public function listChecks(Request $request){
-
+        if (Gate::allows('admin-check')) {
+            return $this->responseError('now allowed for admin');
+        }
         $filterDates = $request->query('filter-month') ?
         $this->filterMonthToDates($request->query('filter-month')) : [];
 
@@ -47,6 +53,9 @@ class TransactionController extends BaseController
     }
 
     public function pendingChecks() {
+        if (!Gate::allows('admin-check')) {
+            return $this->responseError('Only allowed for admin');
+        }
         $return = $this->transactionService->listPendingChecks();
 
         if ($return) {
@@ -84,7 +93,9 @@ class TransactionController extends BaseController
     }
 
     public function listIncomes(Request $request) {
-
+        if (Gate::allows('admin-check')) {
+            return $this->responseError('now allowed for admin');
+        }
         $filterDates = $request->query('filter-month') ?
         $this->filterMonthToDates($request->query('filter-month')) : [];
 
@@ -98,7 +109,9 @@ class TransactionController extends BaseController
     }
 
     public function listExpenses(Request $request) {
-
+        if (Gate::allows('admin-check')) {
+            return $this->responseError('now allowed for admin');
+        }
         $filterDates = $request->query('filter-month') ?
         $this->filterMonthToDates($request->query('filter-month')) : [];
 
@@ -112,6 +125,9 @@ class TransactionController extends BaseController
     }
 
     public function purchase(PurchaseRequest $request){
+        if (Gate::allows('admin-check')) {
+            return $this->responseError('now allowed for admin');
+        }
         $request->validated();
 
         $purchaseInputs = $request->only(['description','amount','due_date']);
@@ -126,6 +142,9 @@ class TransactionController extends BaseController
     }
 
     public function listTransactions(Request $request) {
+        if (Gate::allows('admin-check')) {
+            return $this->responseError('now allowed for admin');
+        }
         $filterDates = $request->query('filter-month') ?
             $this->filterMonthToDates($request->query('filter-month')) : [];
 
@@ -139,6 +158,9 @@ class TransactionController extends BaseController
     }
 
     public function getCurrentbalance() {
+        if (Gate::allows('admin-check')) {
+            return $this->responseError('now allowed for admin');
+        }
 
         $return = $this->transactionService->getCurrentBalance(auth()->user());
 
@@ -157,7 +179,6 @@ class TransactionController extends BaseController
         } else {
             return $this->responseError('Error when trying to get the valid months.');
         }
-
     }
 
 }
