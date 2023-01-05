@@ -26,7 +26,7 @@ class PurchaseRequest extends FormRequest
         return [
             'description' => 'string',
             'amount' => 'required|numeric|gt:0',
-            'due_date' => 'required|date'
+            'due_date' => 'required|date|before:tomorrow'
         ];
     }
 }

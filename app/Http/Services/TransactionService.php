@@ -44,12 +44,21 @@ class TransactionService {
         return ["pending" => $pending, "accepted" => $accepted, "rejected" => $rejected];
     }
 
-    public function approveCheck(Transaction $transaction) : bool {
-        return TransactionRepository::approveCheck($transaction);
+    public function approveCheck(Transaction $transaction) : array {
+
+        if ($transaction->status == TransactionStatus::Pending) {
+            return  ['success' => true, "data" => TransactionRepository::approveCheck($transaction)];
+        } else {
+            return ['success' => false, "message" => "invalid check to approve"];
+        }
     }
 
-    public function rejectCheck(Transaction $transaction) : bool {
-        return TransactionRepository::rejectCheck($transaction);
+    public function rejectCheck(Transaction $transaction) : array {
+        if ($transaction->status == TransactionStatus::Pending) {
+            return  ['success' => true, "data" =>  TransactionRepository::rejectCheck($transaction)];
+        } else {
+            return ['success' => false, "message" => "invalid check to approve"];
+        }
     }
 
     public function listPendingChecks() : Collection  {
@@ -129,8 +138,4 @@ class TransactionService {
 
         return $months;
     }
-
-    /*public function getCheckDetail(Transaction $check){
-        return TransactionRepository::getTransactionDetail($check);
-    }*/
 }

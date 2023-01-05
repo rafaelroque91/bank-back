@@ -56,25 +56,16 @@ class TransactionController extends BaseController
         }
     }
 
-    /*public function checkDetails(Transaction $transaction) {
-        $return = $this->transactionService->getCheckDetail($transaction);
-
-        if ($return) {
-            return $this->responseSuccess($return);
-        } else {
-            return $this->responseError('Error when trying to get pending checks.');
-        }
-    }*/
-
     public function approveCheck(Transaction $transaction) {
         if (!Gate::allows('admin-check')) {
             return $this->responseError('Only allowed for admin');
         }
 
-        if ($this->transactionService->approveCheck($transaction)) {
+        $return = $this->transactionService->approveCheck($transaction);
+        if ($return["success"]) {
             return $this->responseSuccess('','Check approved');
         } else {
-            return $this->responseError('Error when trying to approve the check.');
+            return $this->responseError($return["message"]);
         }
     }
 
@@ -84,10 +75,11 @@ class TransactionController extends BaseController
             return $this->responseError('only allowed for admin');
         }
 
-        if ($this->transactionService->rejectCheck($transaction)) {
+        $return = $this->transactionService->rejectCheck($transaction);
+        if ($return["success"]) {
             return $this->responseSuccess('','Check rejected');
-        }  else {
-            return $this->responseError('Error when trying to reject the check.');
+        } else {
+            return $this->responseError($return["message"]);
         }
     }
 
