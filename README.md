@@ -27,3 +27,21 @@ php artisan passport:client --password
 ```
 php artisan serve
 ```
+
+### Run unit tests
+
+```
+vendor/bin/phpunit
+```
+
+### generate HTML Coverage Report
+
+```
+vendor/bin/phpunit --coverage-html report/
+```
+
+*Last Report in: /report folder
+TransactionService -> check /report/coverage.png
+
+
+

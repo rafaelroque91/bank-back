@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\Users\roque\Desktop\TURNOVER\api-backend\app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/style.css" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">C:\Users\roque\Desktop\TURNOVER\api-backend\app</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Providers/BroadcastServiceProvider.php.html#8">App\Providers\BroadcastServiceProvider</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/AuthController.php.html#9">App\Http\Controllers\AuthController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Services/UserService.php.html#7">App\Http\Services\UserService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Users/RegisterUserRequest.php.html#11">App\Http\Requests\Users\RegisterUserRequest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Users/LoginUserRequest.php.html#11">App\Http\Requests\LoginUserRequest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/PurchaseRequest.php.html#7">App\Http\Requests\Transactions\PurchaseRequest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/NewExpenseRequest.php.html#7">App\Http\Requests\NewExpenseRequest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/ListCheckRequest.php.html#7">App\Http\Requests\ListCheckRequest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/DepositCheckRequest.php.html#7">App\Http\Requests\Transactions\DepositCheckRequest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Repositories/UserRepository.php.html#6">App\Http\Repositories\UserRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/TrustHosts.php.html#7">App\Http\Middleware\TrustHosts</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#10">App\Http\Middleware\RedirectIfAuthenticated</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#7">App\Http\Middleware\Authenticate</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#12">App\Http\Controllers\TransactionController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/BaseController.php.html#7">App\Http\Controllers\BaseController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Console/Kernel.php.html#8">App\Console\Kernel</a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Providers/AuthServiceProvider.php.html#11">App\Providers\AuthServiceProvider</a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="Http/Repositories/TransactionRepository.php.html#11">App\Http\Repositories\TransactionRepository</a></td><td class="text-right">87%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#12">App\Http\Controllers\TransactionController</a></td><td class="text-right">870</td></tr>
+       <tr><td><a href="Http/Controllers/AuthController.php.html#9">App\Http\Controllers\AuthController</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#10">App\Http\Middleware\RedirectIfAuthenticated</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Http/Repositories/TransactionRepository.php.html#11">App\Http\Repositories\TransactionRepository</a></td><td class="text-right">16</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#7">App\Http\Middleware\Authenticate</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Providers/AuthServiceProvider.php.html#11">App\Providers\AuthServiceProvider</a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Console/Kernel.php.html#16"><abbr title="App\Console\Kernel::schedule">schedule</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/NewExpenseRequest.php.html#24"><abbr title="App\Http\Requests\NewExpenseRequest::rules">rules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Repositories/TransactionRepository.php.html#89"><abbr title="App\Http\Repositories\TransactionRepository::getTransactionDetail">getTransactionDetail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Repositories/UserRepository.php.html#8"><abbr title="App\Http\Repositories\UserRepository::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/DepositCheckRequest.php.html#14"><abbr title="App\Http\Requests\Transactions\DepositCheckRequest::authorize">authorize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/DepositCheckRequest.php.html#24"><abbr title="App\Http\Requests\Transactions\DepositCheckRequest::rules">rules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/ListCheckRequest.php.html#14"><abbr title="App\Http\Requests\ListCheckRequest::authorize">authorize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/ListCheckRequest.php.html#24"><abbr title="App\Http\Requests\ListCheckRequest::rules">rules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/NewExpenseRequest.php.html#14"><abbr title="App\Http\Requests\NewExpenseRequest::authorize">authorize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/PurchaseRequest.php.html#14"><abbr title="App\Http\Requests\Transactions\PurchaseRequest::authorize">authorize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/TrustHosts.php.html#14"><abbr title="App\Http\Middleware\TrustHosts::hosts">hosts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Transactions/PurchaseRequest.php.html#24"><abbr title="App\Http\Requests\Transactions\PurchaseRequest::rules">rules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Users/LoginUserRequest.php.html#18"><abbr title="App\Http\Requests\LoginUserRequest::authorize">authorize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Users/LoginUserRequest.php.html#28"><abbr title="App\Http\Requests\LoginUserRequest::rules">rules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Users/RegisterUserRequest.php.html#18"><abbr title="App\Http\Requests\Users\RegisterUserRequest::authorize">authorize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Requests/Users/RegisterUserRequest.php.html#28"><abbr title="App\Http\Requests\Users\RegisterUserRequest::rules">rules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Services/UserService.php.html#9"><abbr title="App\Http\Services\UserService::register">register</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/BroadcastServiceProvider.php.html#15"><abbr title="App\Providers\BroadcastServiceProvider::boot">boot</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Repositories/TransactionRepository.php.html#57"><abbr title="App\Http\Repositories\TransactionRepository::purchase">purchase</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#20"><abbr title="App\Http\Middleware\RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/AuthController.php.html#13"><abbr title="App\Http\Controllers\AuthController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#35"><abbr title="App\Http\Controllers\TransactionController::listChecks">listChecks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/AuthController.php.html#18"><abbr title="App\Http\Controllers\AuthController::register">register</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/AuthController.php.html#32"><abbr title="App\Http\Controllers\AuthController::userData">userData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/BaseController.php.html#9"><abbr title="App\Http\Controllers\BaseController::responseSuccess">responseSuccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/BaseController.php.html#13"><abbr title="App\Http\Controllers\BaseController::responseError">responseError</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/BaseController.php.html#17"><abbr title="App\Http\Controllers\BaseController::filterMonthToDates">filterMonthToDates</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#16"><abbr title="App\Http\Controllers\TransactionController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#21"><abbr title="App\Http\Controllers\TransactionController::depositCheck">depositCheck</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#49"><abbr title="App\Http\Controllers\TransactionController::pendingChecks">pendingChecks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#15"><abbr title="App\Http\Middleware\Authenticate::redirectTo">redirectTo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#69"><abbr title="App\Http\Controllers\TransactionController::approveCheck">approveCheck</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#81"><abbr title="App\Http\Controllers\TransactionController::rejectCheck">rejectCheck</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#94"><abbr title="App\Http\Controllers\TransactionController::listIncomes">listIncomes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#108"><abbr title="App\Http\Controllers\TransactionController::listExpenses">listExpenses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#122"><abbr title="App\Http\Controllers\TransactionController::purchase">purchase</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#136"><abbr title="App\Http\Controllers\TransactionController::listTransactions">listTransactions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#149"><abbr title="App\Http\Controllers\TransactionController::getCurrentbalance">getCurrentbalance</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#160"><abbr title="App\Http\Controllers\TransactionController::getValidMonths">getValidMonths</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/RouteServiceProvider.php.html#57"><abbr title="App\Providers\RouteServiceProvider::configureRateLimiting">configureRateLimiting</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Providers/AuthServiceProvider.php.html#27"><abbr title="App\Providers\AuthServiceProvider::boot">boot</abbr></a></td><td class="text-right">83%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#20"><abbr title="App\Http\Middleware\RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#35"><abbr title="App\Http\Controllers\TransactionController::listChecks">listChecks</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#69"><abbr title="App\Http\Controllers\TransactionController::approveCheck">approveCheck</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#81"><abbr title="App\Http\Controllers\TransactionController::rejectCheck">rejectCheck</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#94"><abbr title="App\Http\Controllers\TransactionController::listIncomes">listIncomes</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#108"><abbr title="App\Http\Controllers\TransactionController::listExpenses">listExpenses</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#136"><abbr title="App\Http\Controllers\TransactionController::listTransactions">listTransactions</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Http/Controllers/AuthController.php.html#18"><abbr title="App\Http\Controllers\AuthController::register">register</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#21"><abbr title="App\Http\Controllers\TransactionController::depositCheck">depositCheck</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#49"><abbr title="App\Http\Controllers\TransactionController::pendingChecks">pendingChecks</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#122"><abbr title="App\Http\Controllers\TransactionController::purchase">purchase</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#149"><abbr title="App\Http\Controllers\TransactionController::getCurrentbalance">getCurrentbalance</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Controllers/TransactionController.php.html#160"><abbr title="App\Http\Controllers\TransactionController::getValidMonths">getValidMonths</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#15"><abbr title="App\Http\Middleware\Authenticate::redirectTo">redirectTo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Providers/RouteServiceProvider.php.html#57"><abbr title="App\Providers\RouteServiceProvider::configureRateLimiting">configureRateLimiting</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Providers/AuthServiceProvider.php.html#27"><abbr title="App\Providers\AuthServiceProvider::boot">boot</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.23</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.26</a> and <a href="https://phpunit.de/">PHPUnit 9.5.27</a> at Thu Jan 5 12:27:39 UTC 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js" type="text/javascript"></script>
+  <script src="_js/d3.min.js" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([15,0,0,0,0,0,0,1,0,2,1,15], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([39,0,0,0,0,0,0,1,0,1,0,34], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[66.66666666666666,2,"<a href=\"Console\/Kernel.php.html#8\">App\\Console\\Kernel<\/a>"],[100,0,"<a href=\"Enums\/TransactionType.php.html#4\">App\\Enums\\TransactionType<\/a>"],[100,1,"<a href=\"Exceptions\/Handler.php.html#8\">App\\Exceptions\\Handler<\/a>"],[0,4,"<a href=\"Http\/Controllers\/AuthController.php.html#9\">App\\Http\\Controllers\\AuthController<\/a>"],[0,3,"<a href=\"Http\/Controllers\/BaseController.php.html#7\">App\\Http\\Controllers\\BaseController<\/a>"],[100,0,"<a href=\"Http\/Controllers\/Controller.php.html#10\">App\\Http\\Controllers\\Controller<\/a>"],[0,29,"<a href=\"Http\/Controllers\/TransactionController.php.html#12\">App\\Http\\Controllers\\TransactionController<\/a>"],[100,0,"<a href=\"Http\/Kernel.php.html#7\">App\\Http\\Kernel<\/a>"],[0,2,"<a href=\"Http\/Middleware\/Authenticate.php.html#7\">App\\Http\\Middleware\\Authenticate<\/a>"],[100,1,"<a href=\"Http\/Middleware\/Cors.php.html#6\">App\\Http\\Middleware\\Cors<\/a>"],[100,0,"<a href=\"Http\/Middleware\/EncryptCookies.php.html#7\">App\\Http\\Middleware\\EncryptCookies<\/a>"],[100,0,"<a href=\"Http\/Middleware\/PreventRequestsDuringMaintenance.php.html#7\">App\\Http\\Middleware\\PreventRequestsDuringMaintenance<\/a>"],[0,4,"<a href=\"Http\/Middleware\/RedirectIfAuthenticated.php.html#10\">App\\Http\\Middleware\\RedirectIfAuthenticated<\/a>"],[100,0,"<a href=\"Http\/Middleware\/TrimStrings.php.html#7\">App\\Http\\Middleware\\TrimStrings<\/a>"],[0,1,"<a href=\"Http\/Middleware\/TrustHosts.php.html#7\">App\\Http\\Middleware\\TrustHosts<\/a>"],[100,0,"<a href=\"Http\/Middleware\/TrustProxies.php.html#8\">App\\Http\\Middleware\\TrustProxies<\/a>"],[100,0,"<a href=\"Http\/Middleware\/VerifyCsrfToken.php.html#7\">App\\Http\\Middleware\\VerifyCsrfToken<\/a>"],[87.87878787878788,16,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#11\">App\\Http\\Repositories\\TransactionRepository<\/a>"],[0,1,"<a href=\"Http\/Repositories\/UserRepository.php.html#6\">App\\Http\\Repositories\\UserRepository<\/a>"],[0,2,"<a href=\"Http\/Requests\/Transactions\/DepositCheckRequest.php.html#7\">App\\Http\\Requests\\Transactions\\DepositCheckRequest<\/a>"],[0,2,"<a href=\"Http\/Requests\/Transactions\/ListCheckRequest.php.html#7\">App\\Http\\Requests\\ListCheckRequest<\/a>"],[0,2,"<a href=\"Http\/Requests\/Transactions\/NewExpenseRequest.php.html#7\">App\\Http\\Requests\\NewExpenseRequest<\/a>"],[0,2,"<a href=\"Http\/Requests\/Transactions\/PurchaseRequest.php.html#7\">App\\Http\\Requests\\Transactions\\PurchaseRequest<\/a>"],[0,2,"<a href=\"Http\/Requests\/Users\/LoginUserRequest.php.html#11\">App\\Http\\Requests\\LoginUserRequest<\/a>"],[0,2,"<a href=\"Http\/Requests\/Users\/RegisterUserRequest.php.html#11\">App\\Http\\Requests\\Users\\RegisterUserRequest<\/a>"],[100,22,"<a href=\"Http\/Services\/TransactionService.php.html#14\">App\\Http\\Services\\TransactionService<\/a>"],[0,1,"<a href=\"Http\/Services\/UserService.php.html#7\">App\\Http\\Services\\UserService<\/a>"],[100,1,"<a href=\"Models\/Transaction.php.html#8\">App\\Models\\Transaction<\/a>"],[100,2,"<a href=\"Models\/User.php.html#11\">App\\Models\\User<\/a>"],[100,2,"<a href=\"Providers\/AppServiceProvider.php.html#7\">App\\Providers\\AppServiceProvider<\/a>"],[83.33333333333334,2,"<a href=\"Providers\/AuthServiceProvider.php.html#11\">App\\Providers\\AuthServiceProvider<\/a>"],[0,1,"<a href=\"Providers\/BroadcastServiceProvider.php.html#8\">App\\Providers\\BroadcastServiceProvider<\/a>"],[100,1,"<a href=\"Providers\/EventServiceProvider.php.html#10\">App\\Providers\\EventServiceProvider<\/a>"],[92.3076923076923,3,"<a href=\"Providers\/RouteServiceProvider.php.html#11\">App\\Providers\\RouteServiceProvider<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Console\/Kernel.php.html#16\">App\\Console\\Kernel::schedule<\/a>"],[100,1,"<a href=\"Console\/Kernel.php.html#26\">App\\Console\\Kernel::commands<\/a>"],[100,1,"<a href=\"Exceptions\/Handler.php.html#35\">App\\Exceptions\\Handler::register<\/a>"],[0,1,"<a href=\"Http\/Controllers\/AuthController.php.html#13\">App\\Http\\Controllers\\AuthController::__construct<\/a>"],[0,2,"<a href=\"Http\/Controllers\/AuthController.php.html#18\">App\\Http\\Controllers\\AuthController::register<\/a>"],[0,1,"<a href=\"Http\/Controllers\/AuthController.php.html#32\">App\\Http\\Controllers\\AuthController::userData<\/a>"],[0,1,"<a href=\"Http\/Controllers\/BaseController.php.html#9\">App\\Http\\Controllers\\BaseController::responseSuccess<\/a>"],[0,1,"<a href=\"Http\/Controllers\/BaseController.php.html#13\">App\\Http\\Controllers\\BaseController::responseError<\/a>"],[0,1,"<a href=\"Http\/Controllers\/BaseController.php.html#17\">App\\Http\\Controllers\\BaseController::filterMonthToDates<\/a>"],[0,1,"<a href=\"Http\/Controllers\/TransactionController.php.html#16\">App\\Http\\Controllers\\TransactionController::__construct<\/a>"],[0,2,"<a href=\"Http\/Controllers\/TransactionController.php.html#21\">App\\Http\\Controllers\\TransactionController::depositCheck<\/a>"],[0,3,"<a href=\"Http\/Controllers\/TransactionController.php.html#35\">App\\Http\\Controllers\\TransactionController::listChecks<\/a>"],[0,2,"<a href=\"Http\/Controllers\/TransactionController.php.html#49\">App\\Http\\Controllers\\TransactionController::pendingChecks<\/a>"],[0,3,"<a href=\"Http\/Controllers\/TransactionController.php.html#69\">App\\Http\\Controllers\\TransactionController::approveCheck<\/a>"],[0,3,"<a href=\"Http\/Controllers\/TransactionController.php.html#81\">App\\Http\\Controllers\\TransactionController::rejectCheck<\/a>"],[0,3,"<a href=\"Http\/Controllers\/TransactionController.php.html#94\">App\\Http\\Controllers\\TransactionController::listIncomes<\/a>"],[0,3,"<a href=\"Http\/Controllers\/TransactionController.php.html#108\">App\\Http\\Controllers\\TransactionController::listExpenses<\/a>"],[0,2,"<a href=\"Http\/Controllers\/TransactionController.php.html#122\">App\\Http\\Controllers\\TransactionController::purchase<\/a>"],[0,3,"<a href=\"Http\/Controllers\/TransactionController.php.html#136\">App\\Http\\Controllers\\TransactionController::listTransactions<\/a>"],[0,2,"<a href=\"Http\/Controllers\/TransactionController.php.html#149\">App\\Http\\Controllers\\TransactionController::getCurrentbalance<\/a>"],[0,2,"<a href=\"Http\/Controllers\/TransactionController.php.html#160\">App\\Http\\Controllers\\TransactionController::getValidMonths<\/a>"],[0,2,"<a href=\"Http\/Middleware\/Authenticate.php.html#15\">App\\Http\\Middleware\\Authenticate::redirectTo<\/a>"],[100,1,"<a href=\"Http\/Middleware\/Cors.php.html#15\">App\\Http\\Middleware\\Cors::handle<\/a>"],[0,4,"<a href=\"Http\/Middleware\/RedirectIfAuthenticated.php.html#20\">App\\Http\\Middleware\\RedirectIfAuthenticated::handle<\/a>"],[0,1,"<a href=\"Http\/Middleware\/TrustHosts.php.html#14\">App\\Http\\Middleware\\TrustHosts::hosts<\/a>"],[100,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#13\">App\\Http\\Repositories\\TransactionRepository::create<\/a>"],[100,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#18\">App\\Http\\Repositories\\TransactionRepository::listUserChecks<\/a>"],[100,2,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#24\">App\\Http\\Repositories\\TransactionRepository::listPendingChecks<\/a>"],[100,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#33\">App\\Http\\Repositories\\TransactionRepository::listExpenses<\/a>"],[100,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#38\">App\\Http\\Repositories\\TransactionRepository::listIncomes<\/a>"],[100,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#45\">App\\Http\\Repositories\\TransactionRepository::approveCheck<\/a>"],[100,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#52\">App\\Http\\Repositories\\TransactionRepository::rejectCheck<\/a>"],[0,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#57\">App\\Http\\Repositories\\TransactionRepository::purchase<\/a>"],[100,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#62\">App\\Http\\Repositories\\TransactionRepository::listTransactions<\/a>"],[100,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#67\">App\\Http\\Repositories\\TransactionRepository::getTotalExpense<\/a>"],[100,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#72\">App\\Http\\Repositories\\TransactionRepository::getTotalIncome<\/a>"],[100,2,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#77\">App\\Http\\Repositories\\TransactionRepository::getFilterTransaction<\/a>"],[100,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#84\">App\\Http\\Repositories\\TransactionRepository::getMinDateValidMonths<\/a>"],[0,1,"<a href=\"Http\/Repositories\/TransactionRepository.php.html#89\">App\\Http\\Repositories\\TransactionRepository::getTransactionDetail<\/a>"],[0,1,"<a href=\"Http\/Repositories\/UserRepository.php.html#8\">App\\Http\\Repositories\\UserRepository::create<\/a>"],[0,1,"<a href=\"Http\/Requests\/Transactions\/DepositCheckRequest.php.html#14\">App\\Http\\Requests\\Transactions\\DepositCheckRequest::authorize<\/a>"],[0,1,"<a href=\"Http\/Requests\/Transactions\/DepositCheckRequest.php.html#24\">App\\Http\\Requests\\Transactions\\DepositCheckRequest::rules<\/a>"],[0,1,"<a href=\"Http\/Requests\/Transactions\/ListCheckRequest.php.html#14\">App\\Http\\Requests\\ListCheckRequest::authorize<\/a>"],[0,1,"<a href=\"Http\/Requests\/Transactions\/ListCheckRequest.php.html#24\">App\\Http\\Requests\\ListCheckRequest::rules<\/a>"],[0,1,"<a href=\"Http\/Requests\/Transactions\/NewExpenseRequest.php.html#14\">App\\Http\\Requests\\NewExpenseRequest::authorize<\/a>"],[0,1,"<a href=\"Http\/Requests\/Transactions\/NewExpenseRequest.php.html#24\">App\\Http\\Requests\\NewExpenseRequest::rules<\/a>"],[0,1,"<a href=\"Http\/Requests\/Transactions\/PurchaseRequest.php.html#14\">App\\Http\\Requests\\Transactions\\PurchaseRequest::authorize<\/a>"],[0,1,"<a href=\"Http\/Requests\/Transactions\/PurchaseRequest.php.html#24\">App\\Http\\Requests\\Transactions\\PurchaseRequest::rules<\/a>"],[0,1,"<a href=\"Http\/Requests\/Users\/LoginUserRequest.php.html#18\">App\\Http\\Requests\\LoginUserRequest::authorize<\/a>"],[0,1,"<a href=\"Http\/Requests\/Users\/LoginUserRequest.php.html#28\">App\\Http\\Requests\\LoginUserRequest::rules<\/a>"],[0,1,"<a href=\"Http\/Requests\/Users\/RegisterUserRequest.php.html#18\">App\\Http\\Requests\\Users\\RegisterUserRequest::authorize<\/a>"],[0,1,"<a href=\"Http\/Requests\/Users\/RegisterUserRequest.php.html#28\">App\\Http\\Requests\\Users\\RegisterUserRequest::rules<\/a>"],[100,1,"<a href=\"Http\/Services\/TransactionService.php.html#16\">App\\Http\\Services\\TransactionService::depositCheck<\/a>"],[100,5,"<a href=\"Http\/Services\/TransactionService.php.html#23\">App\\Http\\Services\\TransactionService::listUserChecks<\/a>"],[100,1,"<a href=\"Http\/Services\/TransactionService.php.html#47\">App\\Http\\Services\\TransactionService::approveCheck<\/a>"],[100,1,"<a href=\"Http\/Services\/TransactionService.php.html#51\">App\\Http\\Services\\TransactionService::rejectCheck<\/a>"],[100,2,"<a href=\"Http\/Services\/TransactionService.php.html#55\">App\\Http\\Services\\TransactionService::listPendingChecks<\/a>"],[100,1,"<a href=\"Http\/Services\/TransactionService.php.html#64\">App\\Http\\Services\\TransactionService::listIncomes<\/a>"],[100,1,"<a href=\"Http\/Services\/TransactionService.php.html#68\">App\\Http\\Services\\TransactionService::listExpenses<\/a>"],[100,2,"<a href=\"Http\/Services\/TransactionService.php.html#72\">App\\Http\\Services\\TransactionService::purchase<\/a>"],[100,2,"<a href=\"Http\/Services\/TransactionService.php.html#81\">App\\Http\\Services\\TransactionService::listTransactions<\/a>"],[100,1,"<a href=\"Http\/Services\/TransactionService.php.html#98\">App\\Http\\Services\\TransactionService::getCurrentBalance<\/a>"],[100,3,"<a href=\"Http\/Services\/TransactionService.php.html#105\">App\\Http\\Services\\TransactionService::sumTransactions<\/a>"],[100,2,"<a href=\"Http\/Services\/TransactionService.php.html#123\">App\\Http\\Services\\TransactionService::getValidMonths<\/a>"],[0,1,"<a href=\"Http\/Services\/UserService.php.html#9\">App\\Http\\Services\\UserService::register<\/a>"],[100,1,"<a href=\"Models\/Transaction.php.html#22\">App\\Models\\Transaction::user<\/a>"],[100,1,"<a href=\"Models\/User.php.html#28\">App\\Models\\User::transactions<\/a>"],[100,1,"<a href=\"Models\/User.php.html#32\">App\\Models\\User::setPasswordAttribute<\/a>"],[100,1,"<a href=\"Providers\/AppServiceProvider.php.html#14\">App\\Providers\\AppServiceProvider::register<\/a>"],[100,1,"<a href=\"Providers\/AppServiceProvider.php.html#24\">App\\Providers\\AppServiceProvider::boot<\/a>"],[83.33333333333334,2,"<a href=\"Providers\/AuthServiceProvider.php.html#27\">App\\Providers\\AuthServiceProvider::boot<\/a>"],[0,1,"<a href=\"Providers\/BroadcastServiceProvider.php.html#15\">App\\Providers\\BroadcastServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/EventServiceProvider.php.html#28\">App\\Providers\\EventServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/RouteServiceProvider.php.html#36\">App\\Providers\\RouteServiceProvider::boot<\/a>"],[66.66666666666666,2,"<a href=\"Providers\/RouteServiceProvider.php.html#57\">App\\Providers\\RouteServiceProvider::configureRateLimiting<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
