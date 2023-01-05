@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,50 +16,53 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::middleware(['cors'])->group(function () {
+Route::post('/register', [AuthController::class, 'register']);
 
-    Route::post('/register', [AuthController::class, 'register']);
+Route::middleware(['auth:api'])->group(function () {
+    Route::prefix('/user')->group(function () {
+        Route::get('/', [AuthController::class, 'userData']);
+        Route::get('/balance', [TransactionController::class, 'getCurrentbalance']);
+        Route::get('/months', [TransactionController::class, 'getValidMonths']);
+    });
 
-    Route::middleware(['auth:api'])->group(function () {
+    Route::get('/transactions', [TransactionController::class, 'listTransactions']);
 
-        Route::prefix('/user')->group(function () {
-            Route::get('/', [AuthController::class, 'userData']);
-            Route::get('/balance', [TransactionController::class, 'getCurrentbalance']);
-            Route::get('/months', [TransactionController::class, 'getValidMonths']);
-        });
+    //Deposit routes...
+    Route::controller(IncomeController::class)->group(function () {
+        //list incomes
+        Route::get('/income/list', 'list');
+    });
 
-        Route::get('/transactions', [TransactionController::class, 'listTransactions']);
+    Route::get('/income/list', [IncomeController::class, 'list']);
 
-        //Deposit routes...
-        Route::controller(IncomeController::class)->group(function () {
-            //list incomes
-            Route::get('/income/list', 'list');
-        });
+    //Check routes...
+    Route::prefix('/check')->group(function () {
+        Route::post('/deposit', [TransactionController::class,'depositCheck']);
+        Route::get('/list', [TransactionController::class,'listChecks']);
+    });
 
-        Route::get('/income/list', [IncomeController::class, 'list']);
+    //Expenses routes...
+    Route::prefix('/expense')->group(function () {
+        Route::get('/list', [TransactionController::class,'listExpenses']);
+        Route::post('/purchase', [TransactionController::class,'purchase']);
+    });
 
-        //Check routes...
+    //Income routes...
+    Route::get('/income/list', [TransactionController::class,'listIncomes']);
+
+    Route::prefix('/admin')->group(function () {
         Route::prefix('/check')->group(function () {
-            Route::post('/deposit', [TransactionController::class,'depositCheck']);
-            Route::get('/list', [TransactionController::class,'listChecks']);
-        });
-
-        //Expenses routes...
-        Route::prefix('/expense')->group(function () {
-            Route::get('/list', [TransactionController::class,'listExpenses']);
-            Route::post('/purchase', [TransactionController::class,'purchase']);
-        });
-
-        //Income routes...
-        Route::get('/income/list', [TransactionController::class,'listIncomes']);
-
-        Route::prefix('/admin')->group(function () {
-            Route::prefix('/check')->group(function () {
-                Route::get('/pending', [TransactionController::class,'pendingChecks']);
-               // Route::get('/detail/{transaction}', [TransactionController::class,'checkDetails']);
-                Route::post('/approve/{transaction}', [TransactionController::class,'approveCheck']);
-                Route::post('/reject/{transaction}', [TransactionController::class,'rejectCheck']);
-            });
+            Route::get('/pending', [TransactionController::class,'pendingChecks']);
+            // Route::get('/detail/{transaction}', [TransactionController::class,'checkDetails']);
+            Route::post('/approve/{transaction}', [TransactionController::class,'approveCheck']);
+            Route::post('/reject/{transaction}', [TransactionController::class,'rejectCheck']);
         });
     });
 });
+
+/* to generate storage link */
+/*
+Route::get('/storage', function (){
+    Artisan::call("storage:link");
+});
+*/
