@@ -18,7 +18,6 @@ class UserSeeder extends Seeder
             'username' => 'admin',
             'email' => 'admin@bnbbank.com',
             'admin' => true,
-            'balance' => 0,
             'password' => 'password'
         ])->count(1)->create();
     }
